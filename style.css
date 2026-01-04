@@ -162,11 +162,18 @@ footer {
   transform: translateY(0);
 }
 
+/*Navigasi OP */
+section {
+  padding-top: 120px;
+}
+
+
 /* ===== PROJECTS SECTION FIX ===== */
 #projects {
   background: radial-gradient(circle at top, #12002b, #050014);
   min-height: 100vh;
 }
+
 
 
 
