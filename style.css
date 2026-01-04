@@ -130,11 +130,6 @@ h2 {
 }
 
 .skills span,
-#projects {
-  background: radial-gradient(circle at top, #12002b, #050014);
-  min-height: 100vh;
-}
-
 .project-card {
   background: linear-gradient(135deg, #7f00ff, #00eaff);
   color: #000;
@@ -166,6 +161,14 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===== PROJECTS SECTION FIX ===== */
+#projects {
+  background: radial-gradient(circle at top, #12002b, #050014);
+  min-height: 100vh;
+}
+
+
 
 
 
