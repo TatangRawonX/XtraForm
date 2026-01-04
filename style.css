@@ -6,17 +6,17 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at top, #1a0033, #050014);
-  color: #fff;
+  background: #050014;
+  color: white;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 12px;
-  background: rgba(20, 0, 50, 0.85);
+  background: rgba(20,0,50,0.85);
   backdrop-filter: blur(8px);
   text-align: center;
   z-index: 100;
@@ -26,33 +26,76 @@ nav a {
   color: #ff9cff;
   margin: 0 15px;
   text-decoration: none;
-  letter-spacing: 2px;
-  transition: 0.3s;
 }
 
 nav a:hover {
   color: #00eaff;
-  text-shadow: 0 0 8px #00eaff;
+  text-shadow: 0 0 10px #00eaff;
 }
 
-/* HEADER */
+/* BGM BUTTON */
+#bgm-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #7f00ff;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+/* HEADER + ANIME BG */
 header {
   height: 100vh;
   padding-top: 140px;
   text-align: center;
-  background: linear-gradient(135deg, #7f00ff, #00eaff);
 }
 
+.anime-bg {
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    url("https://raw.githubusercontent.com/akabab/small-anime-images/master/images/102.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
-header h1 {
+/* GLITCH TEXT */
+.glitch {
   font-size: 60px;
+  position: relative;
   color: #ff9cff;
-  text-shadow:
-    0 0 10px #ff00ff,
-    0 0 25px #9d00ff;
 }
 
-header p {
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+}
+
+.glitch::before {
+  color: #00eaff;
+  animation: glitch 2s infinite;
+}
+
+.glitch::after {
+  color: #ff00ff;
+  animation: glitch 1.5s infinite reverse;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.subtitle {
   color: #00eaff;
   letter-spacing: 3px;
 }
@@ -68,62 +111,46 @@ h2 {
   text-align: center;
   color: #ff9cff;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px #ff00ff;
 }
 
 /* SKILLS */
-.skills {
+.skills, .projects {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.skills span {
-  padding: 15px 30px;
-  border-radius: 40px;
+.skills span,
+.project-card {
+  padding: 15px 25px;
+  border-radius: 20px;
   background: linear-gradient(135deg, #7f00ff, #00eaff);
   color: black;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
   box-shadow: 0 0 15px rgba(0,255,255,0.6);
+  transition: 0.3s;
 }
 
-.skills span:hover {
-  transform: scale(1.2) rotate(-2deg);
-  box-shadow: 0 0 30px #ff00ff;
+.skills span:hover,
+.project-card:hover {
+  transform: scale(1.1);
 }
 
 /* FOOTER */
 footer {
-  background: rgba(20, 0, 50, 0.9);
   text-align: center;
-  padding: 15px;
-  color: #aaa;
+  padding: 20px;
+  background: rgba(20,0,50,0.9);
 }
 
-/* FADE ANIMATION */
+/* FADE */
 .fade {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1.2s ease;
+  transform: translateY(40px);
+  transition: 1s;
 }
 
 .fade.show {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 36px;
-  }
-
-  nav a {
-    margin: 0 8px;
-    font-size: 12px;
-  }
-}
-
