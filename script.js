@@ -11,6 +11,28 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
+// ===== BGM SAFE HANDLER =====
+const bgm = document.getElementById("bgm");
+const btn = document.getElementById("bgm-toggle");
+
+if (bgm && btn) {
+  btn.addEventListener("click", async () => {
+    try {
+      if (bgm.paused) {
+        bgm.volume = 0.8;
+        await bgm.play();
+        btn.textContent = "🔊";
+      } else {
+        bgm.pause();
+        btn.textContent = "🎵";
+      }
+    } catch (e) {
+      console.error("Audio error:", e);
+    }
+  });
+}
+
+
 // BGM toggle
 const bgm = document.getElementById("bgm");
 const btn = document.getElementById("bgm-toggle");
@@ -30,5 +52,6 @@ btn.addEventListener("click", async () => {
     alert("Audio gagal diputar. Pastikan bgm.mp3 ada.");
   }
 });
+
 
 
