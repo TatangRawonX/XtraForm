@@ -6,9 +6,15 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: #050014;
   color: white;
+
+  background-image: url("waifu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
 
 
 
@@ -106,13 +112,6 @@ header h1 {
 .fade.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.anime-bg {
-  background-image: url("waifu.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 
@@ -230,6 +229,7 @@ section {
   background: radial-gradient(circle at top, #12002b, #050014);
   min-height: 100vh;
 }
+
 
 
 
