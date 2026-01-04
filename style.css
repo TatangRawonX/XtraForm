@@ -55,10 +55,12 @@ header {
 }
 
 .anime-bg {
-  background: url("https://raw.githubusercontent.com/akabab/small-anime-images/master/images/102.jpg");
+  background-image: url("waifu.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 
 /* GLITCH TEXT */
@@ -153,5 +155,6 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
