@@ -34,3 +34,15 @@ if (bgmEl && bgmBtn) {
     }
   });
 }
+
+// ================= OPACITY SLIDER =================
+const opacityRange = document.getElementById("opacityRange");
+
+if (opacityRange) {
+  opacityRange.addEventListener("input", (e) => {
+    document.body.style.setProperty(
+      "--overlay-opacity",
+      e.target.value
+    );
+  });
+}
