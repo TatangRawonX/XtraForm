@@ -56,11 +56,15 @@ header {
 
 .anime-bg {
   background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+    linear-gradient(
+      rgba(127,0,255,0.3),
+      rgba(0,234,255,0.3)
+    ),
     url("https://raw.githubusercontent.com/akabab/small-anime-images/master/images/102.jpg");
   background-size: cover;
   background-position: center;
 }
+
 
 /* GLITCH TEXT */
 .glitch {
@@ -154,3 +158,4 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
