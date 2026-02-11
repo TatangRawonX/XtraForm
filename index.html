@@ -1,122 +1,60 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IoT Development</title>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Anti favicon error -->
-  <link rel="icon" href="data:,">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatang Rawon | IoT Development</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
+        header, nav, section, footer { margin-bottom: 20px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #007BFF; }
+        nav a:hover { text-decoration: underline; }
+        h1, h2 { color: #333; }
+        ul { list-style-type: square; margin-left: 20px; }
+    </style>
 </head>
 <body>
 
-<nav>
-  <a href="#beranda">Beranda</a>
-  <a href="#tentang">tentang</a>
-  <a href="#arsip">Arsip</a>
-  <a href="#log">Log</a>
-</nav>
-
-<!-- BGM -->
-<audio id="bgm" preload="auto" loop>
-  <source src="bgm.mp3" type="audio/mpeg">
-</audio>
-
-<button id="bgm-toggle">🎵</button>
-
-<div id="opacity-control">
-  <label for="opacityRange">BG Opacity</label>
-  <input
-    type="range"
-    id="opacityRange"
-    min="0"
-    max="0.8"
-    step="0.01"
-    value="0.25"
-  >
-</div>
-
-  
-<header id="beranda" class="fade anime-bg">
-  <h1 class="glitch" data-text="Tatang Rawon">Tatang Rawon</h1>
-  <p class="subtitle">Website • Deskripsi • IoT</p>
+<header>
+    <h1>Tatang Rawon</h1>
+    <p>Website • Deskripsi • IoT</p>
 </header>
 
-<section id="tentang" class="fade">
-  <div class="section-inner">
-    <h2>Tentang gw</h2>
-    <p>
-      Website ini dibuat hanya sebagai penyimpanan log dari sistem IoT alat pembasmi hama dan mungkin terbuka untuk publik, segala publikasi tidak dipungut biaya apapun.
-    </p>
-  </div>
-</section>
-  
+<nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#arsip">Arsip</a>
+    <a href="#log">Log</a>
+</nav>
 
-<section id="arsip" class="fade">
-  <div class="section-inner">
-
-    <h2 class="arsip-title">Arsip</h2>
-
-    <p class="arsip-desc">
-      FIX BUG TERBARU
-    </p>
-
-    <div class="arsip-grid">
-      <div class="arsip-card">Histori Sensor Ultrasonik</div>
-      <div class="arsip-card"> Histori Sensor Pir </div>
-      <div class="arsip-card">Histori Pengambilan Data</div>
-    </div>
-
-  </div>
+<section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Website ini dibuat sebagai penyimpanan log dari sistem IoT alat pembasmi hama. Konten ini mungkin terbuka untuk publik dan gratis.</p>
 </section>
 
-
-<section id="log" class="fade">
-  <div class="section-inner">
-
-    <h2 class="log-title">log</h2>
-
-    <p class="log-desc">
-     Perbaikan Terbaru
-    </p>
-
-    <div class="log-grid">
-      <div class="log-card">ESP 32</div>
-      <div class="log-card">Arduino IDE</div>
-      <div class="log-card">PLTS</div>
-      <div class="log-card">Internet of Things</div>
-    </div>
-
-  </div>
+<section id="arsip">
+    <h2>Arsip</h2>
+    <ul>
+        <li>Fix Bug Terbaru</li>
+        <li>Histori Sensor Ultrasonik</li>
+        <li>Histori Sensor PIR</li>
+        <li>Histori Pengambilan Data</li>
+    </ul>
 </section>
 
+<section id="log">
+    <h2>Log</h2>
+    <ul>
+        <li>Perbaikan Terbaru</li>
+        <li>ESP32</li>
+        <li>Arduino IDE</li>
+        <li>PLTS</li>
+        <li>Internet of Things</li>
+    </ul>
+</section>
 
 <footer>
-  <p>© 2026 Politeknik Negeri Jember</p>
+    <small>© 2026 Politeknik Negeri Jember</small>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
